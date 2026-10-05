@@ -1,4 +1,4 @@
-# Agent HQ
+# Backrooms HQ
 
 An AI-agent team that runs Tjay's web-design business while he's away.
 Built 2026-10-05. Owner: Tjay Bui.
@@ -32,7 +32,7 @@ Built 2026-10-05. Owner: Tjay Bui.
 
 ## Talking to the team
 
-From the Agent HQ chat, Tjay can say things like:
+From the Backrooms HQ chat, Tjay can say things like:
 - "Scout 10 more leads in Kitsilano"
 - "Draft a pitch for <business>"
 - "I pitched <business> today" / "Closed <business> for $95"
