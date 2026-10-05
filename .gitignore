@@ -1,0 +1,5 @@
+# Live data stays private. Only the schema example is committed.
+leads.json
+revenue.json
+run-logs/
+content/
