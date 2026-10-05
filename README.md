@@ -43,3 +43,13 @@ From the Agent HQ chat, Tjay can say things like:
 
 Phase 1 (now): the team runs Tjay's own web-design hustle — leads, pitches, follow-ups, money tracking.
 Phase 2 (later): the system itself becomes the product — a done-for-you "agent team in a box" sold to other freelancers and small agencies. Same playbooks, new customers.
+
+## Code
+
+- `hq.py` — pipeline CLI that works on `leads.json` / `revenue.json` sitting next to it:
+  - `python hq.py stats` — pipeline counts by stage, revenue total, top new leads
+  - `python hq.py leads [--stage new]` — list leads, optionally filtered by stage
+  - `python hq.py move <id> <stage>` — move a lead (stages: new, researched, pitched, negotiating, won, lost)
+  - `python hq.py close <id> <amount>` — mark won and log the revenue
+- `leads.schema.json` — the data model for a lead entry.
+- `leads.example.json` — the schema in action, with two sample leads. Your live `leads.json` stays private (see `.gitignore`).
