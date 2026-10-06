@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backrooms HQ</title>
+<meta name="description" content="Backrooms HQ — an AI-agent team running a web-design business. 6 agents deep in the backrooms.">
+<link rel="icon" type="image/webp" href="./assets/icon.webp">
+<link rel="apple-touch-icon" href="./assets/icon.webp">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Backrooms HQ">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img class="brand-icon" src="./assets/icon.webp" alt="Backrooms HQ icon">
+    <div class="brand-text">
+      <span class="brand-name">Backrooms HQ</span>
+      <span class="brand-sub">PIPELINE SNAPSHOT · OCT 5, 2026</span>
+    </div>
+    <div class="status-pulse" title="Systems nominal">
+      <span class="pulse-dot"></span>
+      <span class="pulse-label">LIVE</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero reveal">
+    <img class="hero-img" src="./assets/hero.webp" alt="Liminal backrooms hallway with holographic command screens">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Backrooms HQ</h1>
+      <p class="terminal-line"><span class="prompt">&gt;</span> <span id="tagline"></span><span class="caret">▌</span></p>
+    </div>
+  </section>
+
+  <section class="stats reveal" aria-label="Pipeline stats">
+    <div class="stat-card tilt">
+      <span class="stat-num" data-count="19">0</span>
+      <span class="stat-label">Total leads</span>
+    </div>
+    <div class="stat-card tilt">
+      <span class="stat-num" data-count="1">0</span>
+      <span class="stat-label">Researched</span>
+    </div>
+    <div class="stat-card tilt">
+      <span class="stat-num" data-count="4.1" data-decimals="1">0</span>
+      <span class="stat-label">Avg score / 5</span>
+    </div>
+    <div class="stat-card tilt">
+      <span class="stat-num" data-prefix="$" data-count="0">0</span>
+      <span class="stat-label">Revenue</span>
+    </div>
+  </section>
+
+  <section id="pipeline" class="pipeline reveal" aria-label="Lead pipeline">
+    <h2>Lead Pipeline</h2>
+    <div class="pipeline-controls">
+      <input id="search" type="search" placeholder="Search leads…" aria-label="Search leads">
+      <select id="score-filter" aria-label="Filter by score">
+        <option value="0">All scores</option>
+        <option value="5">5 / 5 only</option>
+        <option value="4">4+ / 5</option>
+        <option value="3">3+ / 5</option>
+      </select>
+    </div>
+    <div class="kanban">
+      <div class="column" data-status="new">
+        <div class="column-header"><h3>Level 0 — New</h3><span class="count" data-count-for="new"></span></div>
+        <div class="cards" data-drop="new"></div>
+      </div>
+      <div class="column" data-status="researched">
+        <div class="column-header"><h3>Level 1 — Researched</h3><span class="count" data-count-for="researched"></span></div>
+        <div class="cards" data-drop="researched"></div>
+      </div>
+      <div class="column" data-status="pitched">
+        <div class="column-header"><h3>Level 2 — Pitched</h3><span class="count" data-count-for="pitched"></span></div>
+        <div class="cards" data-drop="pitched"></div>
+      </div>
+      <div class="column" data-status="negotiating">
+        <div class="column-header"><h3>Level 3 — Negotiating</h3><span class="count" data-count-for="negotiating"></span></div>
+        <div class="cards" data-drop="negotiating"></div>
+      </div>
+      <div class="column" data-status="won">
+        <div class="column-header"><h3>The Exit — Won</h3><span class="count" data-count-for="won"></span></div>
+        <div class="cards" data-drop="won"></div>
+      </div>
+      <div class="column" data-status="lost">
+        <div class="column-header"><h3>Noclipped — Lost</h3><span class="count" data-count-for="lost"></span></div>
+        <div class="cards" data-drop="lost"></div>
+      </div>
+    </div>
+    <p class="hint">Drag cards between levels. Tap a card for details — you can move it from there too.</p>
+  </section>
+
+  <section id="pricing" class="pricing reveal" aria-label="Pricing">
+    <h2>Pricing from the fluorescent floor</h2>
+    <div class="tiers">
+      <div class="tier tilt">
+        <h3>Spark</h3>
+        <p class="tier-price">$45</p>
+        <p class="tier-tag">For shops that just need to exist online.</p>
+        <ul>
+          <li>One-page mobile-friendly website</li>
+          <li>Business info, hours, contact section</li>
+          <li>3-day delivery</li>
+          <li>1 revision round</li>
+        </ul>
+      </div>
+      <div class="tier tier-popular tilt">
+        <span class="popular-badge">MOST POPULAR</span>
+        <h3>Neon</h3>
+        <p class="tier-price">$95</p>
+        <p class="tier-tag">For businesses that want to look legit and get found.</p>
+        <ul>
+          <li>Everything in Spark</li>
+          <li>Custom design matched to their brand</li>
+          <li>Photo gallery or menu section</li>
+          <li>Click-to-call + Google Maps embed</li>
+          <li>Basic SEO + Google Business Profile hookup</li>
+          <li>5-day delivery, 2 revision rounds</li>
+        </ul>
+      </div>
+      <div class="tier tilt">
+        <h3>Afterhours</h3>
+        <p class="tier-price">$195</p>
+        <p class="tier-tag">For businesses that want the site to bring in customers.</p>
+        <ul>
+          <li>Everything in Neon</li>
+          <li>Up to 5 pages</li>
+          <li>Online booking or order form</li>
+          <li>Help writing the site copy</li>
+          <li>30 days of tweaks after launch</li>
+          <li>Priority turnaround</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-note">Domain &amp; hosting always separate — the client pays those directly. Setup is free with every tier.</p>
+
+    <div class="calculator">
+      <h3>Quote calculator</h3>
+      <div class="calc-tiers" role="group" aria-label="Choose a tier">
+        <button class="calc-tier ripple" data-tier="Spark" data-price="45">Spark · $45</button>
+        <button class="calc-tier ripple active" data-tier="Neon" data-price="95">Neon · $95</button>
+        <button class="calc-tier ripple" data-tier="Afterhours" data-price="195">Afterhours · $195</button>
+      </div>
+      <div class="calc-addons">
+        <label><input type="checkbox" data-addon="Extra page" data-price="25"> Extra page <span>+$25</span></label>
+        <label><input type="checkbox" data-addon="Logo refresh" data-price="30"> Logo refresh <span>+$30</span></label>
+        <label><input type="checkbox" data-addon="Rush delivery" data-price="20"> Rush delivery <span>+$20</span></label>
+      </div>
+      <div class="calc-total-row">
+        <span class="calc-total-label">Total</span>
+        <span class="calc-total" id="calc-total">$95</span>
+      </div>
+      <button class="btn ripple" id="copy-quote">Copy quote</button>
+    </div>
+
+    <div class="goal-tracker">
+      <h3>Monthly goal</h3>
+      <p class="goal-text"><span id="goal-revenue">$0</span> of <span id="goal-amount-label">$500</span> monthly goal</p>
+      <div class="goal-bar"><div class="goal-fill" id="goal-fill"></div></div>
+      <label class="goal-edit">Set goal: $<input id="goal-input" type="number" min="1" value="500" aria-label="Monthly revenue goal"></label>
+    </div>
+  </section>
+
+  <section id="agents" class="agents reveal" aria-label="Agent team">
+    <h2>The crew in the backrooms</h2>
+    <div class="agent-grid">
+      <div class="agent-card tilt">
+        <img src="./assets/avatar-lead-scout.webp" alt="Lead Scout avatar">
+        <h3>Lead Scout</h3>
+        <p>Finds local businesses with weak or no websites.</p>
+        <span class="schedule">Mon · 9:11am</span>
+      </div>
+      <div class="agent-card tilt">
+        <img src="./assets/avatar-pitch-crafter.webp" alt="Pitch Crafter avatar">
+        <h3>Pitch Crafter</h3>
+        <p>Drafts tailored pitch packages and demo sites.</p>
+        <span class="schedule">On-demand</span>
+      </div>
+      <div class="agent-card tilt">
+        <img src="./assets/avatar-followup-nudger.webp" alt="Follow-up Nudger avatar">
+        <h3>Follow-up Nudger</h3>
+        <p>Keeps every follow-up on schedule. Zero missed.</p>
+        <span class="schedule">Wed · 6:11pm</span>
+      </div>
+      <div class="agent-card tilt">
+        <img src="./assets/avatar-money-tracker.webp" alt="Money Tracker avatar">
+        <h3>Money Tracker</h3>
+        <p>Tracks revenue, goals, and pipeline value.</p>
+        <span class="schedule">Sun · 7:11pm</span>
+      </div>
+      <div class="agent-card tilt">
+        <img src="./assets/avatar-brand-builder.webp" alt="Brand Builder avatar">
+        <h3>Brand Builder</h3>
+        <p>Ships content that makes Backrooms HQ look legit.</p>
+        <span class="schedule">Fri · 4:11pm</span>
+      </div>
+      <div class="agent-card tilt">
+        <img src="./assets/avatar-pitch-coach.webp" alt="Pitch Coach avatar">
+        <h3>Pitch Coach</h3>
+        <p>Objection drills. Grades you like a skeptical owner.</p>
+        <span class="schedule">On-demand</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="activity" class="activity reveal" aria-label="Agent activity">
+    <h2>Activity feed</h2>
+    <ul class="feed">
+      <li><span class="feed-agent">Lead Scout</span> surfaced 9 new leads across Fraser St &amp; Kingsway.</li>
+      <li><span class="feed-agent">Lead Scout</span> flagged Nuan Nuan Beef Noodle House — opening soon on Denman, pitch window open.</li>
+      <li><span class="feed-agent">Pitch Crafter</span> moved Uptown Barber to Level 1 — pitch package ready.</li>
+      <li><span class="feed-agent">Money Tracker</span> revenue $0 — pipeline holds 19 leads.</li>
+      <li><span class="feed-agent">Pitch Coach</span> is on standby for objection drills.</li>
+    </ul>
+  </section>
+
+  <section id="battle-cards" class="battle-cards reveal" aria-label="Battle cards">
+    <h2>Battle cards</h2>
+    <p class="section-sub">Read on your phone before you walk in. Short answers, honest framing.</p>
+    <details>
+      <summary>"How old are you?"</summary>
+      <p>"17. Which is exactly why I'm cheap and exactly why I'm good at this — I grew up on the internet. An agency charges two grand for a template. I built <em>this</em> [show demo] for your shop specifically."</p>
+    </details>
+    <details>
+      <summary>"We already have Facebook / Instagram."</summary>
+      <p>"That's the problem, actually. When someone Googles you right now, they land on a Facebook page. A one-page site turns that search into a call — services, hours, directions, tap-to-call, all in one place."</p>
+    </details>
+    <details>
+      <summary>"We don't need a website."</summary>
+      <p>"Your reviews say otherwise — strong reviews means people are already looking you up. Right now what they find is a Facebook page or nothing. You're leaving walk-ins on the table."</p>
+    </details>
+    <details>
+      <summary>"Too expensive."</summary>
+      <p>"Fair. The starter is $45 — that's the essentials: services, hours, map, tap-to-call. Most shops go for the $95 because it adds your reviews and a gallery, but we can start small."</p>
+    </details>
+    <details>
+      <summary>"Can I think about it?"</summary>
+      <p>"Of course — I'll leave this flyer. Quick question so I don't guess: what would you need to see to say yes?" (Then be quiet. Let them answer.)</p>
+    </details>
+    <details>
+      <summary>"Who else have you done this for?"</summary>
+      <p>"You're one of my first — that's why you're getting this price instead of agency prices. And it's why I built the concept for <em>your</em> shop before asking for anything."</p>
+    </details>
+    <details>
+      <summary>"How long does it take?"</summary>
+      <p>"About a week. And nothing goes live without your approval — you see everything first."</p>
+    </details>
+    <details>
+      <summary>"What about the domain and hosting?"</summary>
+      <p>"Separate from the build price, and you'd approve it before I buy anything. Usually around $15–20 a year for the domain. I'll show you the exact cost first."</p>
+    </details>
+  </section>
+
+  <section id="commands" class="commands reveal" aria-label="Command reference">
+    <h2>Command reference</h2>
+    <p class="section-sub">Tap a chip to copy. Paste it into chat with Tjay's crew.</p>
+    <div class="chips">
+      <button class="chip ripple" data-cmd="draft a pitch for ___">draft a pitch for ___</button>
+      <button class="chip ripple" data-cmd="move ___ to pitched">move ___ to pitched</button>
+      <button class="chip ripple" data-cmd="log $95 won deal">log $95 won deal</button>
+      <button class="chip ripple" data-cmd="scout more leads">scout more leads</button>
+      <button class="chip ripple" data-cmd="nudge my follow-ups">nudge my follow-ups</button>
+      <button class="chip ripple" data-cmd="show money digest">show money digest</button>
+      <button class="chip ripple" data-cmd="roleplay as a skeptical shop owner">roleplay as a skeptical shop owner</button>
+      <button class="chip ripple" data-cmd="build a concept site for ___">build a concept site for ___</button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p class="footer-brand">Backrooms HQ — the business runs while you're away.</p>
+  <p class="footer-rule">Iron rule: nothing goes out to a business without Tjay's approval.</p>
+</footer>
+
+<div id="lead-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="m-name">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+    <h3 id="m-name"></h3>
+    <p class="m-meta"><span id="m-category"></span> · <span id="m-neighborhood"></span></p>
+    <p class="m-score">Score: <strong id="m-score"></strong>/5 · <span id="m-site"></span></p>
+    <p class="m-evidence" id="m-evidence"></p>
+    <p class="m-notes" id="m-notes"></p>
+    <label class="m-move">Move to
+      <select id="m-stage">
+        <option value="new">Level 0 — New</option>
+        <option value="researched">Level 1 — Researched</option>
+        <option value="pitched">Level 2 — Pitched</option>
+        <option value="negotiating">Level 3 — Negotiating</option>
+        <option value="won">The Exit — Won</option>
+        <option value="lost">Noclipped — Lost</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden" role="status"></div>
+
+<script src="./app.js"></script>
+</body>
+</html>
